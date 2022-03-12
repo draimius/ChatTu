@@ -84,7 +84,7 @@ io.on('connection', (socket) => {
   });
 });
 //not completly nessesary but capture the port value/number
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 //tells server to listen at that port (front desk location) for any request
 server.listen(PORT, () => console.log('server runnin on port 3000'));
 //???why server and not io here io is the bundle application server also similar but no socket.io libary
